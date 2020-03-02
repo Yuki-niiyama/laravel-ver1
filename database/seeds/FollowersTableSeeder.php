@@ -13,7 +13,6 @@ class FollowersTableSeeder extends Seeder
     {
         //
         DB::table('followers')->insert([
-            'id' => ,
             'user_id' => 123,
             'follower_id' => 456,
             'created_at' => Carbon\Carbon::now(),

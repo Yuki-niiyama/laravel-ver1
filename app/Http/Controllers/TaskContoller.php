@@ -17,11 +17,28 @@ class TaskContoller extends Controller
         $tasks = Task::all();
         //dd($tasks);
 
-
         //viweを返す
         return view('tasks.index', compact('tasks'));
 
-        dd(123);
+    }
+
+    public function create()
+    {
+        return view('tasks.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->all();
+
+        //データの保存（model）
+        Task::create([
+            'tel' => $request->input('tel'),
+        ]);
+
+        //一覧に戻る（view）
+        return redirect()->to('list');
+
     }
 }
 

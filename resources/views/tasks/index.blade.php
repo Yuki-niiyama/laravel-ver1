@@ -4,3 +4,6 @@
     <p>{{ $task->created_at}}</p>
 @endforeach
 
+
+<a href="{{url('tasks/create')}}">新規追加</a>
+

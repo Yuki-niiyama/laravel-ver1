@@ -22,7 +22,14 @@ Route::get('/', function () {
 
 Route::get('/list', 'TaskContoller@index');
 
+Route::get('/tasks/create', 'TaskContoller@create');
+
+Route::post('/tasks/store', 'TaskContoller@store');
 
 Route::get('/comment', 'commentContoller@index');
 
 Route::get('/follower', 'FollowerContoller@index');
+
+
+
+
