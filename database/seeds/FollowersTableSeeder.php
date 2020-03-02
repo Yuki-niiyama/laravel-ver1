@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TasksTableSeeder extends Seeder
+class FollowersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,9 +11,11 @@ class TasksTableSeeder extends Seeder
      */
     public function run()
     {
-        //どんなテストデータを入れるのか
-        DB::table('tasks')->insert([
-            'tel' => 111,
+        //
+        DB::table('followers')->insert([
+            'id' => ,
+            'user_id' => 123,
+            'follower_id' => 456,
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
 

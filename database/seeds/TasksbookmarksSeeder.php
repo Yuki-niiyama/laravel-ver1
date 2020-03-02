@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TasksTableSeeder extends Seeder
+class bookmarksTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,9 +11,9 @@ class TasksTableSeeder extends Seeder
      */
     public function run()
     {
-        //どんなテストデータを入れるのか
-        DB::table('tasks')->insert([
-            'tel' => 111,
+        DB::table('bookmarks')->insert([
+            'user_id' => 111,
+            'task_id' => 111,
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now()
 
