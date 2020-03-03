@@ -9,7 +9,7 @@
 <body>
     <form action="{{ url('tasks/store')}}" method="post">
         @csrf
-    <input type="tel" name="tel" value="{{ old('tel') }}">
+    <input type="tel" name="tel" value="{{ old('tel', $task->task) }}">
         {{-- バリデーション --}}
         {{-- {{  $errors->first('tel') }} --}}
         @error('tel')
@@ -20,3 +20,5 @@
 
 </body>
 </html>
+
+

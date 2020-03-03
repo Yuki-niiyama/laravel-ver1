@@ -30,6 +30,6 @@ Route::get('/comment', 'commentContoller@index');
 
 Route::get('/follower', 'FollowerContoller@index');
 
-
+Route::get('/tasks/{id}/edit', 'TaskContoller@edit');
 
 

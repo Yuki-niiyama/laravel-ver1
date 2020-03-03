@@ -46,4 +46,22 @@ class TaskContoller extends Controller
         return redirect()->to('list');
 
     }
+
+    public function edit(int $id)
+    {
+        //編集対象のデータを取得する
+        $task = Task::find($id);
+
+        //編集画面を表示する
+        return view('tasks.edit', compact('task'));
+        //tasks/edit.blade.php
+        //$tasksは渡す
+        //create.php.phpをコピーでOK
+
+
+
+
+
+    }
+
 }
