@@ -10,6 +10,9 @@
     <form action="{{ url('tasks/store')}}" method="post">
         @csrf
         <input type="tel" name="tel">
+        {{-- バリデーション --}}
+        {{-- {{  $errors->first('tel') }} --}}
+
         <button type="submit">追加</button>
     </form>
 

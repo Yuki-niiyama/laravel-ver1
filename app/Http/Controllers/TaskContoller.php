@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Createtask;
 use Illuminate\Http\Request;
 use App\Task;
 
@@ -27,9 +28,14 @@ class TaskContoller extends Controller
         return view('tasks.create');
     }
 
-    public function store(Request $request)
+    public function store(Createtask $request)
     {
         $request->all();
+
+        //バリデーション
+        // $request->validate([
+        //     'tel' => 'numeric'
+        // ]);
 
         //データの保存（model）
         Task::create([
@@ -41,5 +47,3 @@ class TaskContoller extends Controller
 
     }
 }
-
-
