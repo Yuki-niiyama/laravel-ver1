@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{ url('tasks/store')}}" method="post">
+    {{-- routeは関数 --}}
+    {{--  --}}
+    <form action="{{ route('tasks.update', ['id' => $task->id ])}}" method="POST">
+        @method('put')
         @csrf
     <input type="tel" name="tel" value="{{ old('tel', $task->task) }}">
-        {{-- バリデーション --}}
-        {{-- {{  $errors->first('tel') }} --}}
         @error('tel')
             {{ $message }}
         @enderror

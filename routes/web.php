@@ -30,6 +30,10 @@ Route::get('/comment', 'commentContoller@index');
 
 Route::get('/follower', 'FollowerContoller@index');
 
-Route::get('/tasks/{id}/edit', 'TaskContoller@edit');
+Route::get('/tasks/{id}/edit', 'TaskContoller@edit')->name('tasks.edit');
+
+//nmaeはURLの処理にニックネームを作ることができる
+//これを使うとURLが変更になった時の変更点がrouteだけになる。
+Route::put('/tasks/{id}/update', 'TaskContoller@update')->name('tasks.update');
 
 

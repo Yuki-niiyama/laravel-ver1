@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Createtask;
+use App\Http\Requests\Updatetask;
 use Illuminate\Http\Request;
 use App\Task;
 
@@ -57,11 +58,22 @@ class TaskContoller extends Controller
         //tasks/edit.blade.php
         //$tasksは渡す
         //create.php.phpをコピーでOK
+    }
 
+    public function update(Updatetask $request, int $id)
+    {
+        //更新する対象のデータを取得
+        $task = Task::find($id);
+        //更新
+        $task->update([
+            'tel' => $request->tel,
+        ]);
 
-
-
+        //一覧に戻り
+        return redirect()->to('list');
 
     }
+
+
 
 }
