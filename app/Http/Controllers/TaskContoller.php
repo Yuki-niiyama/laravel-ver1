@@ -74,6 +74,20 @@ class TaskContoller extends Controller
 
     }
 
+    //引数＄id int(条件)
+    public function delete(int $id)
+    {
+        //選択されたデータの取得
+        $task = Task::find($id);
+
+
+        //選択データの削除
+        $task -> delete();
+
+        //
+        return redirect()->to('list');
+    }
+
 
 
 }

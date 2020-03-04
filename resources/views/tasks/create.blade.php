@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="{{ url('tasks/store')}}" method="post">
-        @csrf
+     @csrf
     <input type="tel" name="tel" value="{{ old('tel') }}">
         {{-- バリデーション --}}
         {{-- {{  $errors->first('tel') }} --}}

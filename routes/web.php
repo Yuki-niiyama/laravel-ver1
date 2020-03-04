@@ -36,4 +36,6 @@ Route::get('/tasks/{id}/edit', 'TaskContoller@edit')->name('tasks.edit');
 //これを使うとURLが変更になった時の変更点がrouteだけになる。
 Route::put('/tasks/{id}/update', 'TaskContoller@update')->name('tasks.update');
 
+Route::delete('/tasks/{id}/delete','TaskContoller@delete')->name('tasks.delete');
+
 
